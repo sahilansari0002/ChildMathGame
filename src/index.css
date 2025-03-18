@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0ea5e9;
+  --secondary-color: #d946ef;
+  --accent-color: #f59e0b;
+  --background-color: #f0f9ff;
+  --text-color: #0c4a6e;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  @apply bg-gradient-to-b from-primary-50 to-primary-100 min-h-screen;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md;
+}
+
+.btn-primary {
+  @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+}
+
+.btn-secondary {
+  @apply bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500;
+}
+
+.btn-accent {
+  @apply bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-500;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-300;
+}
+
+.input {
+  @apply px-4 py-2 border-2 border-primary-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-800;
+}
+
+.badge-secondary {
+  @apply bg-secondary-100 text-secondary-800;
+}
+
+.badge-accent {
+  @apply bg-accent-100 text-accent-800;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
+/* Animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Drag and drop styles */
+.draggable-item {
+  @apply cursor-grab active:cursor-grabbing;
+}
+
+.drop-zone {
+  @apply border-2 border-dashed border-primary-300 rounded-lg p-4 transition-all duration-300;
+}
+
+.drop-zone.active {
+  @apply border-primary-500 bg-primary-50;
+}
