@@ -193,7 +193,7 @@ const SettingsPage: React.FC = () => {
             <Card>
               <h2 className="text-xl font-bold mb-4">About Gyan Guru</h2>
               <p className="text-gray-600 mb-2">
-                Gyan Guru is a fun and interactive learning platform designed for Indian children.
+                Gyan Guru is a fun and interactive learning platform designed for Indian children. Created By Sahil Ansari.
               </p>
               <p className="text-gray-600">
                 Version 1.0.0 • Made with ❤️ for Indian children
